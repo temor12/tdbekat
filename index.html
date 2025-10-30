@@ -200,6 +200,33 @@
             color: var(--text-secondary);
         }
         
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .back-home-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .back-home-btn:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+        }
+        
         .theme-toggle {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -431,10 +458,17 @@
                 font-size: 0.8rem;
             }
             
+            .theme-toggle, .back-home-btn {
+                font-size: 0.9rem;
+            }
+            
+            .back-home-btn {
+                padding: 6px 12px;
+            }
+            
             .theme-toggle {
                 width: 36px;
                 height: 36px;
-                font-size: 0.9rem;
             }
             
             .main-app-btn {
@@ -474,6 +508,13 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 8px;
+            }
+            
+            .header-controls {
+                order: -1;
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 8px;
             }
             
             .app-category {
@@ -518,9 +559,15 @@
                         <p class="subtitle">منصة التطبيقات العربية</p>
                     </div>
                 </div>
-                <button class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-sun"></i>
-                </button>
+                <div class="header-controls">
+                    <a href="https://alkarradatech.xyz/index.html/" class="back-home-btn" title="العودة للصفحة الرئيسية">
+                        <i class="fas fa-home"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
